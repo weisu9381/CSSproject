@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+            font-size: 14px;
+        }
+        .relative, .absolute {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        div[class^="child-01"]{
+            float: left;
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+        }
+        .child-01, .child-01-02 {
+            background-color: #fba;
+        }
+        div[class^="child-02"]{
+            background-color: #abf;
+            float: left;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+        }
+        .clearfix {
+            *zoom: 1;
+        }
+        .clearfix:after,
+        .clearfix:before{
+            content: '';
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        div.child-01-01{
+            position: relative;
+            left: 300px;
+            border: 1px dashed red;
+            line-height: 30px;
+        }
+        .child-02-01, .child-01-02 {
+            position: relative;
+            left: 250px;
+        }
+        div.child-01-02 {
+            line-height: 40px;
+        }
+        .arror-01 {
+            position: absolute;
+            top: 50px;
+            left: 300px;
+            width: 100px;
+            height: 100px;
+            border: 0 solid black;
+            border-bottom-width: 5px;
+        }
+        .arror-02 {
+            position: absolute;
+            top: 125px;
+            left: 340px;
+            width: 50px;
+            height: 50px;
+            border: 0 solid black;
+            border-top-width: 5px;
+            border-right-width: 5px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        .absolute .child-02-01 {
+            position: absolute;
+            top: 0;
+            left: 450px;
+            z-index: -1;
+        }
+        .absolute .text {
+            float: left;
+            position: relative;
+            width: 100px;
+            top: 20px;
+            left: 180px;
+        }
+        .absolute .child-01-01{
+            left: 200px;
+        }
+        .absolute .child-01-02{
+            left: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative">
+        <div class="line1 clearfix">
+            <div class="child-01">child-01</div>
+            <div class="child-01-01">child-01 <br/> relative相对自身移动,但未脱离标准流,<br/>所以位置还占着, <br/>child-02没有顶上来</div>
+        </div>
+        <div class="line2 clearfix">
+            <div class="child-02">child-02</div>
+            <div class="child-02-01">child-02</div>
+            <div class="child-01-02">child-01 <br/> position: relative; <br/> left: 200px;<br/> top: 100px; </div>
+        </div>
+        <div class="arror-01"></div>
+        <div class="arror-02"></div>
+    </div>
+
+    <div class="absolute">
+        <div class="line1 clearfix">
+            <div class="child-01">child-01</div>
+            <div class="text">absolute脱离标准流,不占位置,child-02就顶上来了</div>
+            <div class="child-01-01"></div>
+        </div>
+        <div class="line2 clearfix">
+            <div class="child-02">child-02</div>
+            <div class="child-02-01">child-02</div>
+            <div class="child-01-02">child-01 <br/> position: absolute; <br/> left: 200px;<br/> top: 100px; </div>
+        </div>
+        <div class="arror-01"></div>
+        <div class="arror-02"></div>
+    </div>
+</body>
+</html>

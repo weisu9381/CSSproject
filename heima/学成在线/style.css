@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #F4F5F9;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:#333;
+}
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after,
+.clearfix:before {
+    content: '';
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+header{
+    height: 100px;
+    overflow: hidden;
+}
+nav{
+    width: 1366px;
+    height: 42px;
+    margin: 26px auto;
+}
+.logo {
+    float: left;
+    margin-right: 60px;
+}
+.logo img{
+    width: 180px;
+    height: 42px;
+    margin-left: 50px;
+    margin-top: 2px;
+}
+.navbar {
+    float: left;
+}
+.navbar li{
+    float: left;
+    line-height: 42px;
+}
+.navbar li a{
+    display: block;
+    height: 42px;
+    font-size: 18px;
+    padding: 0 8px;
+    color: #050505;
+}
+.navbar li a:hover {
+    border-bottom: 2px solid #0598F5;
+}
+.search {
+    float: left;
+    background-color: #fba;
+    margin: 1px 0 0 60px;
+}
+.search input {
+    float: left;
+    width: 340px;
+    height: 38px;
+    border: 1px solid #0598F5;
+    padding-left: 20px;
+}
+.search button {
+    border: 0;
+    float: left;
+    width: 50px;
+    height: 40px;
+    background: url(img/nav_search.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+.personal{
+    float: right;
+    width: 350px;
+    height: 42px;
+}
+.personal a {
+    float: left;
+    display: block;
+    height: 42px;
+    font-size: 18px;
+    line-height: 42px;
+    color: #050505;
+}
+.personal a[class="center"]{
+    padding: 0 20px;
+    width: 74px;
+}
+.personal a[class="center"]:hover{
+    border-bottom: 2px solid #0598F5;
+}
+.personal a[class="ring"]{
+    width: 50px;
+}
+.personal a[class="profile"]{
+    width: 180px;
+}
+.personal img{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+.personal .profile img{
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.banner {
+    height: 420px;
+    background-color: rgb(79,62,227);
+}
+.banner-in {
+    height: 100%;
+    background: url("img/banner.png") -90px -30px  no-repeat;
+}
+.sidebar {
+    float: left;
+    width: 270px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+.sidebar li a{
+    font-size: 14px;
+    padding: 0 20px;
+    color: #fff;
+    display: block;
+    line-height: 47px;
+}
+.sidebar li a:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+.sidebar a span {
+    float: right;
+    font-family: Arial;
+}
+.timetable {
+    float: right;
+    width: 340px;
+    height: 340px;
+    background-color: #fff;
+    margin: 40px 80px 0 0;
+}
+.timetable dt {
+    text-align: center;
+    font-size: 25px;
+    line-height: 64px;
+    letter-spacing: 4px;
+    color: #fff;
+    background-color: rgb(149,202,234);
+}
+.timetable dd {
+    width: 300px;
+    height: 54px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    padding-top: 12px;
+}
+.timetable dd h4{
+    font-size: 18px;
+    font-weight: normal;
+}
+.timetable dd p{
+    font-size: 16px;
+    color: #b3b3b3;
+}
+.timetable dd:last-child {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #00a4ff;
+    border: 1px solid #00a4ff;
+    margin-top: 12px;
+    padding-top: 0;
+}
+.timetable dl a {
+    display: block;
+}
+.timetable dd a:hover {
+    background-color:      #00a4ff;
+}
+.timetable dd:last-child a{
+    color: #00a4ff;
+}
+.timetable dd:last-child a:hover{
+    background-color: #00a4ff;
+    color: #fff;
+}
