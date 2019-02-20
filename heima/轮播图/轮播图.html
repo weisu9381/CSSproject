@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .slideshow {
+            margin: 50px auto;
+            width: 400px;
+            height: 200px;
+            background: url("01.jpg") no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+        }
+        .slidebar-left,
+        .slidebar-right{
+            width: 20px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+        }
+        .slidebar-left img,
+        .slidebar-right img{
+            width: 100%;
+            height: 100%;
+        }
+        .slidebar-left {
+            left: 0;
+        }
+        .slidebar-right {
+            right: 0;
+        }
+        ul.slidedot {
+            background-color: #bcbcbc;
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -50px;
+            border-radius: 10px;
+        }
+        ul.slidedot li {
+            width: 14px;
+            height: 14px;
+            margin: 3px;
+            background-color: #4c4c4c;
+            float: left;
+            border-radius: 10px;
+        }
+        ul.slidedot li.active {
+            background-color: #c8830f;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow">
+        <a class="slidebar-left"href="#"><img src="slidebar-l.png"/></a>
+        <a class="slidebar-right" href="#"><img src="slidebar-r.png"/></a>
+        <ul class="slidedot">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
